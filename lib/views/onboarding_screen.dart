@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+
 import '../utils/constants.dart';
 
 class OnboardingScreen extends StatelessWidget {
+  const OnboardingScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,9 +20,9 @@ class OnboardingScreen extends StatelessWidget {
                   fit: BoxFit.cover,
                   width: double.infinity,
                 ),
-                SafeArea(
+                const SafeArea(
                   child: Padding(
-                    padding: const EdgeInsets.all(16.0),
+                    padding: EdgeInsets.all(16.0),
                     child: Align(
                       alignment: Alignment.topRight,
                       child: Icon(Icons.more_vert, color: Colors.white),
@@ -38,7 +41,7 @@ class OnboardingScreen extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
+                  const Text(
                     'Elevate your coffee experience at Cuppify',
                     textAlign: TextAlign.center,
                     style: TextStyle(
@@ -47,8 +50,8 @@ class OnboardingScreen extends StatelessWidget {
                       color: Colors.white,
                     ),
                   ),
-                  SizedBox(height: 8),
-                  Text(
+                  const SizedBox(height: 8),
+                  const Text(
                     'Where coffee meets comfort.',
                     textAlign: TextAlign.center,
                     style: TextStyle(
@@ -56,7 +59,7 @@ class OnboardingScreen extends StatelessWidget {
                       color: Colors.white70,
                     ),
                   ),
-                  SizedBox(height: 24),
+                  const SizedBox(height: 24),
                   ElevatedButton(
                     onPressed: () {
                       Navigator.pushReplacementNamed(context, '/signup');
@@ -70,7 +73,7 @@ class OnboardingScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(8),
                       ),
                     ),
-                    child: Text(
+                    child: const Text(
                       'Get Started',
                       style: TextStyle(fontSize: 16),
                     ),
