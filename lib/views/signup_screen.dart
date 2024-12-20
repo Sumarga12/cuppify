@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+
 import '../utils/constants.dart';
 
 class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -9,7 +12,7 @@ class SignUpScreen extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: AppColors.primaryColor),
+          icon: const Icon(Icons.arrow_back, color: AppColors.primaryColor),
           onPressed: () => Navigator.pop(context),
         ),
       ),
@@ -18,7 +21,7 @@ class SignUpScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Text(
+            const Text(
               'Sign Up',
               style: TextStyle(
                 fontSize: 24,
@@ -27,7 +30,7 @@ class SignUpScreen extends StatelessWidget {
               ),
               textAlign: TextAlign.center,
             ),
-            SizedBox(height: 40),
+            const SizedBox(height: 40),
             TextField(
               decoration: InputDecoration(
                 labelText: 'Name',
@@ -36,7 +39,7 @@ class SignUpScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             TextField(
               decoration: InputDecoration(
                 labelText: 'Email',
@@ -45,7 +48,7 @@ class SignUpScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             TextField(
               obscureText: true,
               decoration: InputDecoration(
@@ -53,14 +56,14 @@ class SignUpScreen extends StatelessWidget {
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),
-                suffixIcon: Icon(Icons.visibility),
+                suffixIcon: const Icon(Icons.visibility),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               children: [
                 Checkbox(value: false, onChanged: (value) {}),
-                Expanded(
+                const Expanded(
                   child: Text(
                     'By signing up, you agree to the Terms of Service and Privacy Policy.',
                     style: TextStyle(fontSize: 12),
@@ -68,7 +71,7 @@ class SignUpScreen extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {},
               style: ElevatedButton.styleFrom(
@@ -78,39 +81,39 @@ class SignUpScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8),
                 ),
               ),
-              child: Text('Sign Up', style: TextStyle(fontSize: 16)),
+              child: const Text('Sign Up', style: TextStyle(fontSize: 16)),
             ),
-            SizedBox(height: 20),
-            Center(
+            const SizedBox(height: 20),
+            const Center(
               child: Text('Or with', style: TextStyle(color: Colors.grey)),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             OutlinedButton.icon(
               onPressed: () {},
               icon: Image.asset(
                 'assets/images/google_logo.webp', // Add your Google icon here
                 height: 20,
               ),
-              label: Text(
+              label: const Text(
                 'Sign Up with Google',
                 style: TextStyle(color: Colors.black),
               ),
               style: OutlinedButton.styleFrom(
-                side: BorderSide(color: Colors.grey),
+                side: const BorderSide(color: Colors.grey),
                 padding: const EdgeInsets.symmetric(vertical: 16),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8),
                 ),
               ),
             ),
-            Spacer(),
+            const Spacer(),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Already have an account?"),
+                const Text("Already have an account?"),
                 TextButton(
                   onPressed: () => Navigator.pushNamed(context, '/login'),
-                  child: Text(
+                  child: const Text(
                     'Login',
                     style: TextStyle(color: AppColors.primaryColor),
                   ),

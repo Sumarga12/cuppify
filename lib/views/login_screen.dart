@@ -5,6 +5,8 @@ class LoginScreen extends StatelessWidget {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
+  LoginScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,7 +14,7 @@ class LoginScreen extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: AppColors.primaryColor),
+          icon: const Icon(Icons.arrow_back, color: AppColors.primaryColor),
           onPressed: () => Navigator.pop(context),
         ),
       ),
@@ -21,7 +23,7 @@ class LoginScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Text(
+            const Text(
               'Login',
               style: TextStyle(
                 fontSize: 24,
@@ -30,7 +32,7 @@ class LoginScreen extends StatelessWidget {
               ),
               textAlign: TextAlign.center,
             ),
-            SizedBox(height: 40),
+            const SizedBox(height: 40),
             TextField(
               controller: emailController,
               decoration: InputDecoration(
@@ -40,7 +42,7 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             TextField(
               controller: passwordController,
               obscureText: true,
@@ -49,10 +51,10 @@ class LoginScreen extends StatelessWidget {
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),
-                suffixIcon: Icon(Icons.visibility),
+                suffixIcon: const Icon(Icons.visibility),
               ),
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             ElevatedButton(
               onPressed: () {
                 // Hardcoded credentials validation
@@ -62,7 +64,7 @@ class LoginScreen extends StatelessWidget {
                 } else {
                   // Show an error message
                   ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
+                    const SnackBar(
                       content: Text('Invalid Credentials'),
                       backgroundColor: Colors.red,
                     ),
@@ -76,16 +78,16 @@ class LoginScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8),
                 ),
               ),
-              child: Text('Login', style: TextStyle(fontSize: 16)),
+              child: const Text('Login', style: TextStyle(fontSize: 16)),
             ),
-            Spacer(),
+            const Spacer(),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Don't have an account yet?"),
+                const Text("Don't have an account yet?"),
                 TextButton(
                   onPressed: () => Navigator.pushNamed(context, '/signup'),
-                  child: Text(
+                  child: const Text(
                     'Sign Up',
                     style: TextStyle(color: AppColors.primaryColor),
                   ),
