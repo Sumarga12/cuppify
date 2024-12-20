@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-import '../viewmodels/splash_viewmodel.dart';  // Import ViewModel
+
+import '../viewmodels/splash_viewmodel.dart'; // Import ViewModel
 
 class SplashScreen extends StatelessWidget {
-  final SplashViewModel viewModel = SplashViewModel(); // Instantiate ViewModel
+  final SplashViewModel viewModel = SplashViewModel();
+
+  SplashScreen({super.key}); // Instantiate ViewModel
 
   @override
   Widget build(BuildContext context) {
@@ -11,9 +14,9 @@ class SplashScreen extends StatelessWidget {
     return Scaffold(
       body: Container(
         height: double.infinity,
-        width: double.infinity      ,
-        color: Color(0xFF00A562), // Green background
-        child: Column(
+        width: double.infinity,
+        color: const Color(0xFF00A562), // Green background
+        child: const Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Icon(
