@@ -1,0 +1,2 @@
+D:/foodhub/client/android/app/.cxx/Debug/i3y342a3/x86/CMakeFiles/edit_cache.dir
+D:/foodhub/client/android/app/.cxx/Debug/i3y342a3/x86/CMakeFiles/rebuild_cache.dir
